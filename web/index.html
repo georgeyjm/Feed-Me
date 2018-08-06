@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+	<title>Feed Me Data</title>
+	<!-- <script src='ajas-utils.js'></script> -->
+	<script src='js/jquery-3.3.1.min.js'></script>
+	<script src='js/bootstrap.min.js'></script>
+	<!-- <script src='js/scripts.js'></script> -->
+	<script src='js/Chart.min.js'></script>
+	<script src='js/Chart.bundle.min.js'></script>
+	<script src='js/Chart.js'></script>
+	<script src='js/socket.io.js'></script>
+
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<link rel='stylesheet' href='css/bootstrap.css'>
+	<link rel='stylesheet' href='css/style.css'>
+
+</head>
+
+<body class='bg-light'>
+	<header>
+		<nav class='navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow'>
+			<a class='navbar-brand col-sm-3 col-md-2 mr-0' href='index.html'>
+				<h1 class='text-white'>
+					<img src='logo.svg' width='150' height='80' alt='logo'>
+					Feed Me Data</h1>
+			</a>
+			<form class='form-inline mt-2 mt-md-0'>
+				<input class='form-control mr-sm-2' type='text' placeholder='Search' aria-label='Search'>
+				<button class='btn btn-outline-primary my-2 my-sm-0' type='submit'>Search</button>
+			</form>
+		</nav>
+	</header>
+	<br />
+	<div class='jumbotron'>
+		<div class='container'>
+			<h1 id='top' class='display-3'>Welcome!</h1>
+			<p>This is the website that visualizes the data ‘fed’ to our <em>Feed Me</em> rubbish bins.</p>
+			<p><a class='btn btn-primary btn-lg' href='#mylinechart_1' role='button'>Learn more &raquo;</a></p>
+		</div>
+	</div>
+	<br />
+	<div>
+		<h3 class='text-center'>Distribution of Garbage Categories</h3>
+	</div>
+	<div class='row'>
+		<div class='col-md-4 container'>
+			<canvas id='mypiechart_1' width='100' height='100'></canvas>
+			<a class='col-md-4'><h5 class='text-center'>Weekly Distribution</h5></a>
+		</div>
+		<div class='col-md-4 container'>
+			<canvas id='mypiechart_2' width='100' height='100'></canvas>
+			<a class='col-md-4 text-center'><h5 class='text-center'>Monthly Distribution</h5></a>
+		</div>
+		<div class='col-md-4 container'>
+			<canvas id='mypiechart_3' width='100' height='100'></canvas>
+			<a class='col-md-4 text-center'><h5 class='text-center'>Annual Distribution</h5></a>
+		</div>
+	</div>
+	<div>
+		<br /><br /><br /><br />
+		<div>
+			<h3 class='text-center'>Garbage Quantity over Time</h3>
+		</div>
+		<div id='carousel' class='carousel slide' data-ride='carousel'>
+			<ol class='carousel-indicators'>
+				<li data-target='#carousel' data-slide-to='0' class='active'></li>
+				<li data-target='#carousel' data-slide-to='1'></li>
+				<li data-target='#carousel' data-slide-to='2'></li>
+			</ol>
+			<div class='carousel-inner'>
+				<div class='carousel-item active'>
+					<canvas id='mylinechart_1' width='50' height='25'></canvas>
+					<div class='carousel-caption col-lg-12'>
+						<h5 class='text-center'>Weekly</h5></div>
+				</div>
+				<div class='carousel-item'>
+					<canvas id='mylinechart_2' width='50' height='25'></canvas>
+					<div class='carousel-caption d-none d-lg-block'>
+						<h5>Monthly</h5></div>
+				</div>
+				<div class='carousel-item'>
+					<canvas id='mylinechart_3' width='50' height='25'></canvas>
+					<div class='carousel-caption d-none d-md-block'>
+						<h5>Annual</h5></div>
+				</div>
+			</div>
+			<a class='carousel-control-prev' href='#carousel' role='button' data-slide='prev'>
+		  <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+		  <span class='sr-only'>Previous</span>
+		</a>
+			<a class='carousel-control-next' href='#carousel' role='button' data-slide='next'>
+		  <span class='carousel-control-next-icon' aria-hidden='true'></span>
+		  <span class='sr-only'>Next</span>
+		</a>
+		</div>
+
+		<hr class='featurette-divider'>
+		<footer class='container'>
+			<p class='float-right'><a href='#top'>Back to top</a></p>
+			<p>&copy; 2017-2018 Feed Me, Inc. &middot; <a href='#'>Privacy</a> &middot; <a href='#'>Terms</a></p>
+		</footer>
+</body>
+<script type='text/javascript' src='charts.js'></script>
+<script type='text/javascript' src='ws.js'></script>
+
+</html>
