@@ -3,3 +3,4 @@ develop
 *.pyc
 __pycache__
 docker
+.ipynb_checkpoints
